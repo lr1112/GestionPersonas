@@ -1,0 +1,21 @@
+﻿<Window x:Class="GestionPersonas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionPersonas"
+        mc:Ignorable="d"
+        Title="Ventana Principal" Height="300" Width="400">
+    <Grid>
+        <StackPanel>
+            <Menu Height="20">
+                <MenuItem Header="Registro">
+                    <MenuItem x:Name="PersonaMenuItem" Header="Registro de Personas" Click="PersonaMenuItem_Click"/>
+                    <MenuItem x:Name="RolMenuItem" Header="Registro de Roles" Click="RolMenuItem_Click"/>
+                    <MenuItem x:Name="GrupoMenuItem" Header="Registro de Grupos" Click="GrupoMenuItem_Click"/>
+                    <MenuItem x:Name="AportesMenuItem" Header="Registro de Aportes" Click="AportesMenuItem_Click"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+    </Grid>
+</Window>

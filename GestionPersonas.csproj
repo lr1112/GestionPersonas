@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\icons8-eliminar-16.png" />
+    <None Remove="Resources\icons8-google-web-search-24.png" />
+    <None Remove="Resources\icons8-guardar-48.png" />
+    <None Remove="Resources\icons8-nuevo-48.png" />
+    <None Remove="UI\Registros\agregar.png" />
+    <None Remove="UI\Registros\bus.jpg" />
+    <None Remove="UI\Registros\eli.jpg" />
+    <None Remove="UI\Registros\guar.jpg" />
+    <None Remove="UI\Registros\nue.jpg" />
+    <None Remove="UI\Registros\remover.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\icons8-eliminar-16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icons8-google-web-search-24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icons8-guardar-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\icons8-nuevo-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DATA\" />
+    <Folder Include="UI\Consultas\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\Registros\agregar.png" />
+    <Resource Include="UI\Registros\bus.jpg" />
+    <Resource Include="UI\Registros\eli.jpg" />
+    <Resource Include="UI\Registros\guar.jpg" />
+    <Resource Include="UI\Registros\nue.jpg" />
+    <Resource Include="UI\Registros\remover.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DATA\PeopleGestor.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
